@@ -38,6 +38,7 @@ public class ejercicio1 {
         System.out.println("El número menor es " + numeroMenor);
         System.out.println("La suma es " + suma);
         System.out.println("El media es " + media);
+        System.out.println("para subir ");
     }
 
 }
