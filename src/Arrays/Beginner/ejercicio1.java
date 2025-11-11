@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.Beginner;
 
 import java.util.Random;
 import java.util.Scanner;
