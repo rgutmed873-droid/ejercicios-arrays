@@ -15,17 +15,32 @@ public class ejercicio4 {
 
         int [] nElementos = new int[5];
         inicializarArray(nElementos);
+        System.out.println("Array original");
+        mostrarArray(nElementos);
+
         desplazaCiclicoDerecha(nElementos);
+
+        System.out.println("Array desplazado");
+        mostrarArray(nElementos);
     }
 
-    private static void desplazaCiclicoDerecha(int[] nElementos) {
-        int[] aux = nElementos;
-        for (int i = 0; i < nElementos.length; i++) {
-            System.out.println(nElementos[i]);
-
-
+    private static void mostrarArray(int[] a) {
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
         }
 
+    }
+
+    private static void desplazaCiclicoDerecha(int[] b) {
+        int ultimo = b[b.length-1]; //Guardo el último numero para no perderlo
+
+        //Desplazar el último al principp
+        for (int i = b.length-1; i > 0; i--) {
+            b[i] = b[i-1];
+            
+
+        }
+        b[0] = ultimo; // El último pasa a primer lugar
     }
 
     private static void inicializarArray(int[] nElementos) {
