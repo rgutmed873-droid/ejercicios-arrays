@@ -36,11 +36,11 @@ public class ejercicio1 {
         //Mientras hayan intercambios, seguimos pasando
         while (cambio) {
             cambio = false;
-
+            //En cada pasada podemos reducir en 1 la porción a comparar
             for (int i = 0; i < nElementos.length-1-iteracion; i++)
                 if (nElementos[i] > nElementos[i + 1]) {
                     cambio = true;
-                    //Intercambio de los dos elementos
+                    //Intercambio de los valores
                     int temp = nElementos[i];
                     nElementos[i] = nElementos[i + 1];
                     nElementos[i + 1] = temp;
@@ -49,18 +49,32 @@ public class ejercicio1 {
         }
     }
 
+    /**
+     * Metodo para mostrar la array
+     * @param nElementos
+     */
     private static void mostrarArray(int[] nElementos) {
         for (int i = 0; i < nElementos.length; i++) {
             System.out.print(nElementos[i] + " ");
         }
     }
 
+    /**
+     * Metodo para inicializarla con numeros aleatorios
+     * @param nElementos
+     */
     private static void inicializarArray(int[] nElementos) {
         for (int i = 0; i < nElementos.length; i++) {
             nElementos[i] = numeroAleatorios(0,1000);
         }
     }
 
+    /**
+     * Metodo para generar números aleatorios
+     * @param min el número minimo que se va a generar
+     * @param max el número máximo que se va a generar
+     * @return que devuelva el que genera
+     */
     private static int numeroAleatorios(int min, int max) {
         Random random = new Random();
         return random.nextInt(max - min + 1) + min;
