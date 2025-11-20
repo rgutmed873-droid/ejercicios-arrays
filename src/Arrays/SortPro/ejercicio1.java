@@ -11,34 +11,41 @@ public class ejercicio1 {
          * siguiente enlace http://lwh.free.fr/pages/algo/tri/tri_bulle_es.html
          */
 
-        int [] nElementos = new int[5];
+        int [] nElementos = new int[10];
         inicializarArray(nElementos);
-        mostrarArray(nElementos);
         System.out.println("Array sin ordenar");
+        mostrarArray(nElementos);
+
         ordenacionBurbuja(nElementos);
 
-        System.out.println("Array ordenada");
+        System.out.println("\n\nArray ordenada");
         mostrarArray(nElementos);
+
+
 
     }
 
+    /**
+     * Metodo para ordenar en burbuja número aleatorios
+     * @param nElementos
+     */
     private static void ordenacionBurbuja(int[] nElementos) {
         int iteracion = 0;
 
         boolean cambio = true;
-
+        //Mientras hayan intercambios, seguimos pasando
         while (cambio) {
             cambio = false;
-            iteracion++;
-            for (int i = 0; i < nElementos[i]-iteracion; i++) {
-                if (nElementos[i] > nElementos[i+1]){
+
+            for (int i = 0; i < nElementos.length-1-iteracion; i++)
+                if (nElementos[i] > nElementos[i + 1]) {
                     cambio = true;
                     //Intercambio de los dos elementos
                     int temp = nElementos[i];
-                    nElementos[i] = nElementos[i+1];
-                    nElementos[i+1] = temp;
+                    nElementos[i] = nElementos[i + 1];
+                    nElementos[i + 1] = temp;
                 }
-            }
+            iteracion++;
         }
     }
 
