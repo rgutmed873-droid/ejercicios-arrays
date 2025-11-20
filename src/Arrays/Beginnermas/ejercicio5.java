@@ -36,7 +36,6 @@ public class ejercicio5 {
         int [] temp = new int[posiciones];
 
         //Guardar los últimas posiciones de la array temporal
-
         for (int i = 0; i < posiciones; i++) {
            temp[i] = a[n-posiciones+i];
         }
